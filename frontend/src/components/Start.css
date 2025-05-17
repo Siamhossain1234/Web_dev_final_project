@@ -1,0 +1,273 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Page Wrapper */
+  .page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  /* Content - To Center the content vertically */
+  .content {
+    margin-top: -150px;
+    flex-grow: 1; /* Pushes footer to the bottom */
+    text-align: center;
+  }
+  
+  /* HEADER (Logo on the side) */
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  /* Logo Styling */
+  .logo {
+    margin: 0px;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px !important;
+    font-weight: 900 !important; /* Bold */
+    font-style: italic !important; /* Italic */
+    color: var(--blue) !important;
+    text-transform: uppercase;
+  }
+  
+  /* Welcome Message Styling */
+  .Welcome {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10vh;
+    /* padding: 25px; */
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .subtitle {
+    font: 1.5em sans-serif;
+    /* padding-bottom: 50px; */
+    color: white;
+  }
+  
+  /* Button Styling */
+  button {
+    height: 100%;
+    width: 100%;
+    font-size: large;
+    z-index: 10;  /* Make sure button is above other elements */
+    position: relative;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .Welcome {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Dropdown Button */
+  .dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  /* Dropdown Container */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu */
+  .show {display:block;}
+  
+/* ===== Gradient Background ===== */
+/* ===== Full-Screen Gradient ===== */
+.start-page {
+    position: fixed; /* Covers entire viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #a1c4fd 0%, #6a8fee 50%, #8456ec 100%);
+    animation: gradient 15s ease infinite;
+    background-size: 300% 300%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Waves ===== */
+.waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh; /* Larger waves */
+    z-index: 1;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 1000% 1000% 0 0;
+    animation: wave 12s linear infinite;
+}
+
+.wave:nth-child(1) {
+    opacity: 0.7;
+    animation-delay: 0s;
+}
+
+.wave:nth-child(2) {
+    opacity: 0.5;
+    animation: wave 18s linear reverse infinite;
+    bottom: -2vh;
+}
+
+.wave:nth-child(3) {
+    opacity: 0.3;
+    animation: wave 24s linear infinite;
+    bottom: -4vh;
+}
+
+/* ===== Content ===== */
+.content {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== Animations ===== */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes wave {
+    0% { transform: translateX(0) scaleY(1); }
+    50% { transform: translateX(-25%) scaleY(0.9); }
+    100% { transform: translateX(0) scaleY(1); }
+}
+
+
+/* Show the dropdown menu */
+.show {display:block;}
+
+/* ===== NEW BUTTON STYLES ===== */
+/* Base button styles */
+.btn-custom {
+    color: white !important;
+    border: none !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+    padding: 16px 32px !important;
+    border-radius: 8px !important;
+    margin: 8px !important;
+}
+
+/* Create Project Button (Pink) */
+.btn-create {
+    background-color: #FF6B9D !important;
+    border: 2px solid #FF4785 !important;
+}
+
+/* Join Project Button (Orange) */
+.btn-join {
+    background-color: #FF9A3C !important;
+    border: 2px solid #FF8200 !important;
+}
+
+/* Hover effects for both buttons */
+.btn-create:hover, .btn-join:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+.btn-create:hover {
+    background-color: #FF4785 !important;
+}
+
+.btn-join:hover {
+    background-color: #FF8200 !important;
+}
+
+/* Dropdown form styling */
+.dropdown-content button[type='submit'] {
+    background-color: #6a8fee;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 90%;
+}
+
+.dropdown-content input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    background-color: white;
+    border: 1px solid var(--blue);
+    border-radius: 4px;
+    color: black;
+}

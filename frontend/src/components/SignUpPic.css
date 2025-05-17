@@ -1,0 +1,16 @@
+/* Ensure image is responsive and fits 50% width */
+.signup-pic {
+    max-width: 100%;  /* Make the image responsive */
+    height: auto;     /* Keep aspect ratio */
+    display: block;   /* Avoid extra spacing */
+    margin: auto;     /* Center within the column */
+  }
+  
+  /* Ensure both columns take equal space */
+  .full-height {
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center horizontally */
+    height: 100vh; /* Full screen height */
+  }
+  

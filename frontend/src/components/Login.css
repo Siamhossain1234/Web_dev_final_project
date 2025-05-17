@@ -1,0 +1,211 @@
+.login-container {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.login-pic-container {
+    height: 100vh; /* Full height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-pic {
+    max-width: 100%;
+    height: auto;
+}
+
+.form-wrapper {
+    width: 60%; /* Make the form smaller so it doesn't take up all space */
+}
+
+.login-heading {
+    font-weight: bold;
+    font-size: 35px;
+    color: var(--orange);
+    text-align: left;
+    margin-bottom: 30px;
+}
+  
+.login-form{
+    text-align: left;
+}
+
+.input {
+    border-radius: 20px !important;
+}
+
+.login-button{
+    background-color: var(--blue);
+    border-radius: 20px;
+}
+
+.button-divider {
+    width: 100%;
+    opacity: 70%;
+    height: 1px; /* Thickness of the line */
+    background-color: var(--blue) ;/* Color of the line */
+    margin-top: 15px; /* Space between button and line */
+    margin-bottom: 15px; /* Space between button and line */
+}
+
+.google-logo {
+    width: 20px;  /* Adjust logo size */
+    height: 20px; /* Keep it proportional */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.google-login-custom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #1e1e1e;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    border-color: var(--blue);
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    width: 100%; /* Full width */
+    max-width: 300px; /* Adjust to your preference */
+    height: 40px; /* Adjust button height */
+}
+
+.google-login-custom:hover{
+    background-color: var(--blue);
+    color:white ;
+}
+
+h4{
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.register-text {
+    display: block;
+    align-items: center;
+    font-size: 15px;
+    color: #333;
+    margin-top: 10px;
+    text-align: center;
+   
+
+}
+
+/* Style for the "Sign up" link */
+.sign-up-link {
+    color: #007bff; /* Bootstrap blue */
+    font-weight: normal;
+    text-decoration: none;
+    margin-left: 5px;
+    transition: color 0.3s ease-in-out;
+    text-decoration: underline;
+}
+
+/* General Responsive Adjustments */
+@media (max-width: 992px) { /* Tablets */
+    .login-container {
+        margin-top: 20px;
+        height: auto;
+        padding: 40px 20px; /* Add padding for better spacing */
+    }
+
+    .login-pic-container {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px; /* Space between image and form */
+    }
+
+    .form-wrapper {
+        width: 80%; /* Increase form width on smaller screens */
+    }
+
+    h2 {
+        font-size: 28px; /* Reduce heading size */
+    }
+
+    .google-login-custom {
+        max-width: 100%; /* Allow button to take full width */
+    }
+
+    .register-text {
+        font-size: 14px;
+    }
+}
+
+/* Default (Desktop & Tablet) */
+.login-pic-container {
+    height: 100vh; /* Full height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile: Make Image Smaller and Place on Top */
+@media (max-width: 768px) {
+    .login-container {
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .login-pic-container {
+        height: auto;
+        width: 100%;
+        max-height: 150px; /* Adjust height to make the image smaller */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px; /* Add space below image */
+    }
+
+    .login-pic {
+        max-width: 50%; /* Make the image smaller */
+        height: auto;
+    }
+
+    .form-wrapper {
+        width: 100%; /* Form takes full width */
+        padding: 0 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .login-form {
+        text-align: center;
+    }
+
+    .login-button, .google-login-custom {
+        width: 100%;
+        font-size: 14px;
+        height: 40px;
+    }
+
+    .register-text {
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .sign-up-link {
+        font-size: 13px;
+    }
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    text-align: center;
+    padding: 8px;
+    background-color: rgba(220, 53, 69, 0.1);
+    border-radius: 4px;
+    margin-bottom: 15px;
+}

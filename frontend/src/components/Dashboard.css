@@ -1,0 +1,250 @@
+html, body {
+  height: auto;
+  min-height: 100%;
+  overflow-y: auto;
+}
+/* General */
+.project-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ff6600;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .join-code-btn {
+    padding: 0.15rem 0.4rem !important;
+    font-size: 0.75rem !important;
+    line-height: 1.2;
+    margin-right: 0.5rem; /* Adds right margin */
+  margin-left: 0.5rem;  /* Adds left margin */
+  margin-top: 0.25rem;  /* Adds top margin */
+  margin-bottom: 0.25rem; /* Adds bottom margin */
+  }
+  .section-title {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #3583EF;
+    margin-bottom: 1rem;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  
+  .priority-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    display: inline-block;
+  }
+  .left-column {
+    flex: 0 0 60%;
+    min-width: 300px;
+  }
+  
+  .right-column {
+    flex: 2;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: none !important;
+  }
+  
+  /* Tasks */
+  .task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .task-card {
+    background-color: #C2DAFA;
+    color: black;
+    padding: 1.25rem;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+  
+  .task-card > div {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+  
+  /* TITLE */
+  .task-title {
+    font-weight: 500;
+    padding-right: 1rem;
+  }
+  
+  /* Task Info (Severity & Likelihood) */
+  .task-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .task-severity,
+  .task-likelihood {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  .task-severity {
+    background-color: #ffeaea;
+    color: #dc3545;
+  }
+  
+  .task-likelihood {
+    background-color: #e3f2fd;
+    color: #0d6efd;
+  }
+  
+  /* DATE */
+  .task-date {
+    white-space: nowrap;
+    color: #666;
+  }
+  
+  /* ASSIGNEE */
+  .task-assignee select,
+  .task-status select {
+    width: 100%;
+    padding: 0.4rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    background-color: white;
+    color: #333;
+    font-size: 0.85rem;
+    cursor: pointer;
+  }
+  
+  .task-assignee select:focus,
+  .task-status select:focus {
+    outline: none;
+    border-color: #3583EF;
+    box-shadow: 0 0 0 2px rgba(53, 131, 239, 0.2);
+  }
+  
+  /* Expand Button */
+  .expand-button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    background-color: #e3f2fd;
+    border: 1px solid #90caf9;
+    border-radius: 8px;
+    color: #0d6efd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .expand-button:hover {
+    background-color: #bbdefb;
+  }
+  
+  .expand-button i {
+    font-size: 0.8rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+    .task-card {
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    
+    .task-title {
+      grid-column: 1 / -1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .task-card {
+      grid-template-columns: 1fr;
+    }
+    
+    .task-card > div {
+      width: 100%;
+    }
+  }
+  
+  /* Button */
+  .log-risk-btn {
+    background-color: #3583EF;
+    color: white;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(53, 131, 239, 0.4);
+    transition: background-color 0.3s ease;
+    padding: 0.5rem 2rem;
+    margin: 1rem;     /* ✅ Smaller height, wider width */
+    height: 35px;               /* ✅ Optional: control height directly */
+    min-width: 180px;           /* ✅ Wider base */
+    text-align: center;
+    display: inline-block;
+  }
+  
+  .log-risk-btn:hover {
+    background-color: #2f6dd9;
+  }
+  
+  /* Metrics */
+  .metrics-title {
+    color: #3583EF;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+  }
+  
+  .metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .metric-bar {
+    background-color: #FF3380;
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  margin: 0;
+  margin-right: 0.5rem;
+}
+
+.task-count {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+  
